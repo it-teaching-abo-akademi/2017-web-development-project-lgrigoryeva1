@@ -1,0 +1,522 @@
+hmtl,body{
+	width: 100%;
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-size:  16px;
+	font-weight: 400;
+	line-height: 1.495;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	min-width: 1170px;
+	color: #000;
+	
+	background-color: #f2f2f2;
+}
+
+*:focus{
+	outline: 0!important;
+	box-shadow: none!important;
+}
+input{
+	box-shadow: none!important;
+}
+section,
+header,
+footer{
+	width: 100%;
+	display: inline-block;
+	float: left;
+}
+.wrap{
+	width: 100%;
+	float: left;
+}
+.content {
+	width: 1170px;
+	padding: 0 32px;
+	margin: 48px auto;
+}
+.porfolio {
+    width: calc(( 1170px - 96px)/2 );
+    height: 400px;
+    background-color: #FFF;
+    border-radius: 10px!important;
+    float: left;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    padding: 24px 32px;
+    position: relative;
+    
+    transition: width .35s;
+}
+.porfolio:nth-child(2n) {
+    margin-right: 0;
+}
+.title {
+    font-weight: 800;
+    font-size: 24px;
+}
+.title::after {
+    content: attr(data-id);
+}
+.actions {
+    margin-bottom: 24px;
+}
+
+a.button {
+    text-decoration: none;
+    background-color: #2196F3;
+    height: 36px;
+    display: inline-block;
+    line-height: 36px;
+    padding: 0 36px;
+    border-radius: 36px!important;
+    color: #FFF;
+    cursor: pointer;
+    transition: .15s;
+    
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */  
+}
+a.button:hover {
+    background-color: #03A9F4;
+}
+
+a.delete-portfolio {
+	height: 18px;
+	width: 18px;
+	position: absolute;
+	cursor: pointer;
+	display: block;
+	top: 32px;
+	right: 28px;
+}
+
+a.delete-portfolio::after {
+   content: '';
+   position: absolute;
+   height: 18px;
+   width: 18px;
+   background-color:  #999;
+   -webkit-mask-image: url(https://image.flaticon.com/icons/svg/447/447047.svg);
+   -webkit-mask-size: 14px;
+   -webkit-mask-repeat: no-repeat;
+   -webkit-mask-position: center;
+   transition: .15s;
+   top: 50%;
+   right: 50%;
+   transform: translate(50%,-50%);
+}
+a.delete-portfolio:hover::after {
+	background-color: #CF000F;
+	-webkit-mask-size: 18px;
+}
+input.title {
+    border: none;
+    transition: .15s;
+    padding-left: 104px;
+}
+input.title:focus {
+    color: #2196f3;
+}
+
+.porfolio[data-graph="1"] {
+    margin-right: 0;
+    width: 100%;
+}
+.porfolio[data-graph="1"] ~ .porfolio:nth-child(2n){
+    margin-right: 32px;
+}
+.porfolio[data-graph="1"] ~ .porfolio:nth-child(2n + 1){
+    margin-right: 0px;
+}
+
+.currency > span {
+    font-size: 13px;
+}
+
+.currency > a {
+    font-size: 18px;
+    display: inline-block;
+    height: 24px;
+    width: 27px;
+    line-height: 24px;
+    text-align: center;
+    float: left;
+    position: relative;
+    z-index: 5;
+    color: #9E9E9E;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .15s;
+    
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */  
+}
+.currency > a:nth-child(1) {
+    float:left;
+}
+.currency > a:nth-child(2) {
+    float:right;
+}
+.currency {
+    width: 82px;
+    padding: 8px;
+    background-color: #f2f2f2;
+    position: absolute;
+    border-radius: 14px;
+    height: 42px;
+    top: 24px;
+    left: 32px;
+}
+
+.currency::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    background-color: #FFF;
+    display: block;
+    height: 28px;
+    width: 28px;
+    border-radius: 10px;
+    transform: translate(0, -50%);
+    
+    transition: .15s;
+}
+
+.porfolio[data-currency="1"] .currency-one[data-id="1"],
+.porfolio[data-currency="2"] .currency-one[data-id="2"] {
+    color: #333;
+    cursor: default;
+}
+.porfolio[data-currency="2"] .currency::after {
+    left: 47px;
+}
+
+.stocks {height: 287px;margin-bottom: 9px;padding: 24px 0;width: 473px;font-size: 13px;border-bottom: 1px solid #f2f2f2;}
+
+value {
+    font-weight: 800;
+        position: relative;
+        display: inline-block;
+}
+
+.total value {
+    font-size: 19px;
+    color: #2196f3;
+    margin-left: 8px;
+}
+
+
+.stock-one {
+    float: left;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+    padding: 0 12px;
+    position: relative;
+}
+.stock-one > div{
+    float: left;
+}
+.stock-one.head {
+    background-color: #f2f2f2;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #FFF;
+}
+.stock-one.head > div{
+    font-weight: 800!important;
+}
+.stock-one.head > div:nth-child(1){
+    text-transform: none;
+}
+.stock-one > div:nth-child(1){
+    width: 100px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.stock-one > div:nth-child(2){
+    width: 96px;
+}
+.stock-one > div:nth-child(3){
+    width: 100px;
+}
+.stock-one > div:nth-child(4){
+    width: 120px;
+    text-align: right;
+}
+.stock-one > div:nth-child(5){
+    width: 60px;
+}
+
+.stocks-body {
+    width: 473px;
+    height: 238px;
+    float: left;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.stocks-body .stock-one {
+    padding-right: 12px;
+    height: 32px;
+    line-height: 32px;
+    width: 440px;
+    background-color: #FFF;
+}
+
+.stocks-body .stock-one:hover,
+.porfolio .stocks-body .stock-one.current
+{
+background-color: rgb(204, 234, 253);
+    cursor: pointer;
+}
+a.delete-stock {
+    height: 32px;
+        width: 32px;
+        background-color: #ffffff;
+        border: 1px dashed #CF000F;
+        border-left: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        border-radius: 0 5px 5px 0;
+        right: 12px;
+        z-index: 1;
+        transition: background .15s;
+        text-align: center;
+        padding-right: 2px;
+        color: #CF000F;
+        line-height: 30px;
+        font-size: 16px;
+}
+
+a.delete-stock:hover {
+    background-color: #CF000F;
+    color: #FFF;
+}
+.stocks-body .stock-one:hover > div,
+.porfolio .stocks-body .stock-one.current > div{
+   background-color: transparent;
+}
+.stock-one:hover a.delete-stock {
+    right: -32px;
+}
+.stock-one.current:hover a.delete-stock {
+    display: block;
+}
+.stocks-body .stock-one > div {
+    background-color: #FFF;
+    position: relative;
+    z-index: 10;
+}
+
+.stock-one.current a.delete-stock {
+    display: none;
+}
+
+.graph {
+    width: 0px;
+    height: 298px;
+    position: absolute;
+    right: 24px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    transition: .35s;
+    top: 85px;
+    overflow: hidden;
+}
+
+.porfolio[data-graph="1"] .graph {
+	width: 552px;
+	overflow: visible;
+}
+a.add-stock {
+   display: inline-block;
+   padding: 0 12px;
+   background-color: #2196f3;
+   color: #FFF;
+   border-radius: 7px;
+   font-size: 13px;
+   height: 24px;
+   float: right;
+   line-height: 24px;
+   text-decoration: none;
+   transition: .15s;
+   cursor: pointer;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   position: absolute;
+   left: 423px;
+   bottom: 17px;
+}
+
+a.add-stock:hover {
+    background-color: #03A9F4;
+}
+
+.stock-one input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+value[data-value="0"]::before {
+    content: '';
+    display: block;
+    height: 15px;
+    width: 27px;
+    position: absolute;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    top: 9px;
+    left: 0;
+}
+.stock-one:hover value[data-value="0"]::before {
+    background-color: #FFF;
+}
+.stock-value value[data-value="0"]:before {
+    width: 66px;
+}
+
+.stock-tvalue value[data-value="0"]::before {
+    left: initial;
+    right: 0;
+    width: 72px;
+}
+
+.stock-one .stock-name input {
+    text-transform: uppercase;
+}
+a.add-stock.disabled {
+    background-color: #f2f2f2;
+}
+
+.rate {
+    float: right;
+    font-size: 22px;
+    color: #636262;
+    font-weight: 900;
+}
+span#rate {
+    display: inline-block;
+        width: 82px;
+        position: relative;
+        margin-left: 12px;
+        float: right;
+        color: #2196f3;
+}
+
+span#rate[data-null="0"]::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background-color: #ffffff;
+    height: 24px;
+    width: 90px;
+    border-radius: 12px;
+}
+
+.stock-one value {
+	font-weight: 400;
+}
+
+.graph-input {
+    position: absolute;
+    top: -53px;
+}
+
+input.date {
+    height: 32px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    margin-right: 12px;
+    padding: 0 12px;
+    font-size: 13px;
+    width: 300px;
+}
+.date-bl {
+    float: left;
+    position: relative;
+}
+
+.date-bl::after{
+   content: '';
+   position: absolute;
+   height: 32px;
+   width: 32px;
+   background-color:  #ffffff;
+   -webkit-mask-image: url(https://image.flaticon.com/icons/svg/149/149906.svg);
+   -webkit-mask-size: 20px;
+   -webkit-mask-repeat: no-repeat;
+   -webkit-mask-position: center;
+   transition: .15s;
+   top: 50%;
+   right: 12px;
+   transform: translate(0,-50%);
+}
+.date-bl::before{
+   content: '';
+   position: absolute;
+   height: 32px;
+   width: 32px;
+   background-color:  #2196f3;
+   transition: .15s;
+   top: 50%;
+   right: 12px;
+   transform: translate(0,-50%);
+   border-radius: 0 5px 5px 0;
+}
+.porfolio[data-currency="2"] value::after {
+    content: ' €';
+}
+.porfolio[data-currency="1"] value::after {
+    content: ' $';
+}
+
+
+.porfolio[data-graph="1"] .date-bl,
+.porfolio[data-graph="1"] .date-bl::after,
+.porfolio[data-graph="1"] .date-bl::before
+ {
+    display:block;
+}
+.porfolio.date-bl,
+.porfolio .date-bl::after,
+.porfolio .date-bl::before {
+    display:none;
+}
+
+.graph.load::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: rgba(255,255,255, .5);
+    position: absolute;
+    z-index: 100;
+    border-radius: 10px;
+    background-image: url(../svg/25.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.chart-draw {
+    height: 274px;
+    width: 528px;
+    margin: 12px;
+}
